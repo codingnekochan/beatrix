@@ -18,20 +18,29 @@ p{
     font-size: 15px;
     color:hsla(237, 26%, 62%, 0.7);
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    transform: scale(0.6);
+  }
+}
 /* major_sections */
 #sky{
     width: 500px;
     height:300px; 
     border-radius: 350px 350px 0 0;
     position: absolute;
-    left:35vw;
     z-index: 1;
     background-image: url(https://dellsystem.me/img/posts/night-sky-css/stars_small.png), url(https://dellsystem.me/img/posts/night-sky-css/stars_medium.png);
 }
 #beatrix{
-    position:absolute;
-    left: 35vw;
-    top: 15vh;
+    position:absolute; 
 }
 .horizon, .details{
     width:500px;
