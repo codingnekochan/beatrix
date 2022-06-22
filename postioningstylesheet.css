@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(239, 35%, 19%);
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+h2{
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: hsla(0, 0%, 100%, 1);
+}
+p{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color:hsla(237, 26%, 62%, 0.7);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* major_sections */
+#sky{
+    width: 500px;
+    height:250px; 
+    border-radius: 250px 250px 0 0;
+    position:relative;
+    top: -200px;
+    left:-40px;
+    z-index: 1;
+    background-image: url(https://dellsystem.me/img/posts/night-sky-css/stars_small.png), url(https://dellsystem.me/img/posts/night-sky-css/stars_medium.png);
+}
+#beatrix{
+    position:absolute;
+}
+.horizon, .details{
+    width:500px;
+    height: 250px;
+    position:relative;
+}
+.horizon{
+    border-radius: 350px 350px 0 0;
+    box-shadow:  inset 0px 100px 150px 80px hsl(239, 35%, 19%), inset 0px 150px 150px hsla(288, 69%, 66%, 0.85), inset 0 250px 250px hsla(288, 77%, 26%, 0.95), 10px 10px 10px hsl(239, 35%, 19%);
+    
+}
+.details{
+    border: 1px dotted hsla(237, 26%, 62%, 0.6);
+    border-radius: 0 0 350px 350px;
+    position: relative;
+    z-index:-1;
+}
+/* SECTION SKY */
+.stars1, .stars2{
+    position: relative;
+    border-radius: 25px;
+
+}
+.stars1::before, .stars2::before{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    border-radius: 25px;
+
+}
+.stars1{
+   
+    width:2px;
+    height: 7px;
+    background-color:hsla(4, 0%, 99%, 0.8);
+    top: 80px;
+    left:150px;   
+}
+.stars1::before{
+    width: 7px;
+    height: 2px;
+    background-color: hsla(4, 0%, 99%, 0.8);
+    left: -2.1px;
+    top: 2px;
+    box-shadow: 0 0 10px 1px hsla(4, 0%, 99%, 1);
+}
+.stars2{
+    width:3px;
+    height: 10px;
+    background-color:hsla(62, 0%, 95%, 1);
+    top: 20px;
+    left:350px;
+}
+.stars2::before{
+    width: 10px;
+    height: 3px;
+    background-color: hsla(62, 0%, 95%, 1);
+    left: -3.1px;
+    top:3px;
+    box-shadow: 0 0 10px 1px hsla(62, 0%, 95%, 1);
+}
+.stars3, .stars4, .stars5{
+    position:relative;
+    border-radius:50%;
+
+}
+.stars3{
+   width: 4px;
+   height: 4px;
+   background-color:hsla(228, 36%, 95%, 1);
+   box-shadow: 0 0 10px 2px hsla(228, 36%, 95%, 1);
+   bottom:0px;
+   left: 350px;
+   top: 200px;
+}
+.stars4{
+   
+   width: 3px;
+   height: 3px;
+   background-color:hsla(228, 36%, 95%, 0.75);
+   box-shadow: 0 0 10px 2px hsla(228, 36%, 95%, 0.75);
+   top: 100px;
+   left: 450px;
+}
+.stars5{
+    top: 250px;
+    left: 150px;
+   width: 3px;
+   height: 3px;
+   background-color:hsla(288, 69%, 66%, 0.6);
+   box-shadow: 0 0 10px 2px hsla(288, 69%, 66%, 0.8);
+}
+/* SECTON:BEATRIX */
+/* section_horizon*/
+.moon{
+    width: 100px;
+    height: 100px;
+    background-color: hsla(0, 0%, 100%, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px hsla(237, 26%, 62%, 1), 0 0 10px 5px hsl(239, 35%, 19%);
+    position: absolute;
+    left:200px;
+    top: 5px;
+}
+.cloud1{
+    width: 140px;
+    height: 40px;
+    background-color: hsla(237, 26%, 62%, 1) ;
+    border-radius: 100px 100px 0 0 ;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    
+
+}
+.cloud1::before{
+    content: "";
+    display: inline-block;
+    background-color:inherit;
+    border-radius: 50%;
+    width: 65px;
+    height: 60px;
+    position: relative;
+    top: -30px;
+    left:30px;
+}
+.cloud2{ 
+
+    width: 60px;
+    height: 80px;
+    background-color: hsla(237, 26%, 62%, 1);
+    border-radius: 50%;
+    position: absolute;
+    bottom:25px;
+    right: 50px;
+}
+.cloud2::before, .cloud2::after{
+    content:"";
+    display: inline-block;
+    background-color: inherit;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cloud2::before{
+    width: 65px;
+    height: 60px;
+    left:-30px;
+    top:20px;
+}
+.cloud2::after{
+    width: 60px;
+    height: 60px;
+    right:-35px;
+    top: -40px;
+}
+/* section_details */
+.line1, .line2, .line3, .line4{
+    position: absolute;
+    border-radius: 25px;
+}
+.line1{
+    
+    width: 50px;
+    height: 3px;
+    background-color: hsla(237, 26%, 62%, 0.6);
+    left:200px;
+    top: 12px;
+}
+.line2{
+    width:75px;
+    height: 4px;
+    background-color: hsla(237, 7%, 67%, 0.35);
+    left: 215px;
+    top: 24px;
+}
+.line3{
+    width: 100px;
+    height: 5px;
+    background-color: hsla(235, 10%, 50%, 0.2);
+    left: 193px;
+    top: 36px;
+}
+.line4{
+    width: 125px;
+    height: 6px;
+    background-color: hsla(263, 8%, 42%, 0.15);
+    left:193px;
+    top: 48px;
+}
+.name{
+    text-align: center;
+    line-height: 3rem;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}
+.dot{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: hsla(288, 69%, 66%, 1);
+    position: absolute;
+    top: 13px;
+    left:185px;
+}
+
+    @media screen and (max-width: 500px) {
+        .container{
+          transform: scale(0.6);
+        }
+      }
+
+
+    
